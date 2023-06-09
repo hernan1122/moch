@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --background: #000;
+  --background-menu: #111;
+  --title: #fff;
+  --subtitles: #999;
+  --text-primary: #fff;
+  --text-secundary: #eeeeee;
+  --navlink: #666;
+  --navlink-active: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  /* padding: 0 20px; */
+  font-family: 'Ubuntu', sans-serif;
+  background: var(--background);
+}
+h1 {
+  font-size: 2rem;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: var(--title);
+}
+h2 {
+  font-size: 1.9rem;
+  font-weight: ;
+  color: var(--subtitles);
+}
+h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--icons-buttons);
+}
