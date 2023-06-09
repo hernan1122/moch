@@ -1,0 +1,15 @@
+.Header {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  display: flex;
+  align-items: end;
+  z-index: 2;
+}
+.Header img {
+  width: 40px;
+  margin-right: 10px;
+}
