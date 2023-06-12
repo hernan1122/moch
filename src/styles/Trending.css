@@ -2,3 +2,23 @@
   width: 100%;
   padding: 0 20px;
 }
+.Trending-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+}
+.Trending-container::-webkit-scrollbar {
+  height: 3px;
+  background: transparent;
+}
+.Trending-container::-webkit-scrollbar-thumb {
+  background-color: var(--green-app);
+  border-radius: 50px;
+}
+.Trending-container img {
+  width: 120px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
