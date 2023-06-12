@@ -14,7 +14,7 @@
   background: transparent;
 }
 .Trending-container::-webkit-scrollbar-thumb {
-  background-color: var(--green-app);
+  background: var(--scroll);
   border-radius: 50px;
 }
 .Trending-container img {
