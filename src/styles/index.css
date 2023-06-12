@@ -11,8 +11,8 @@
   --text-primary: #fff;
   --text-secundary: #eeeeee;
   --green-app: #36a439;
+  --scroll: #111;
   --navlink: #666;
-  --navlink-active: #fff;
 }
 html {
   font-size: 62.5%;
@@ -33,7 +33,7 @@ h2 {
   color: var(--subtitles);
 }
 h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--icons-buttons);
 }
