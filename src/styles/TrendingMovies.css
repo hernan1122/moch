@@ -1,0 +1,33 @@
+.TrendingMovies {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  top: -70px;
+}
+.TrendingMovies-first-movie {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: calc(50% - 150px);
+}
+.TrendingMovies-container {
+  width: 100%;
+  padding-left: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+}
+.TrendingMovies-container::-webkit-scrollbar {
+  height: 3px;
+  background: transparent;
+}
+.TrendingMovies-container::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+  border-radius: 50px;
+}
+.TrendingMovies-container img {
+  width: 120px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
