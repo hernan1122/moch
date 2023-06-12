@@ -7,9 +7,10 @@
   --background: #000;
   --background-menu: #111;
   --title: #fff;
-  --subtitles: #999;
+  --subtitles: #d3d3d3;
   --text-primary: #fff;
   --text-secundary: #eeeeee;
+  --green-app: #36a439;
   --navlink: #666;
   --navlink-active: #fff;
 }
@@ -27,6 +28,7 @@ h1 {
   color: var(--title);
 }
 h2 {
+  margin-bottom: 10px;
   font-size: 1.9rem;
   color: var(--subtitles);
 }
