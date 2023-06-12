@@ -22,15 +22,28 @@ body {
   font-family: 'Ubuntu', sans-serif;
   background: var(--background);
 }
+body::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+  border-radius: 50px;
+}
 h1 {
   font-size: 2rem;
   font-family: 'Rubik Mono One', sans-serif;
   color: var(--title);
 }
 h2 {
-  margin: 0 0 10px 20px;
+  margin: 12px 0 15px 20px;
   font-size: 1.9rem;
   color: var(--subtitles);
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-primary);
 }
 h5 {
   font-size: 1rem;
