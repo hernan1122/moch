@@ -1,9 +1,9 @@
 .Trending {
   width: 100%;
-  padding: 0 20px;
 }
 .Trending-container {
   width: 100%;
+  padding-left: 20px;
   overflow-x: auto;
   white-space: nowrap;
   display: flex;
