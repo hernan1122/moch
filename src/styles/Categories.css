@@ -1,0 +1,22 @@
+.Categories {
+  width: 100%;
+  position: relative;
+  top: -60px;
+}
+.Categories-container {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.Categories-content {
+  padding: 10px;
+  border: 1px solid var(--green-app);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+.Categories-content:hover {
+  background: var(--green-app);
+}
