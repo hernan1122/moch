@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Header.css'
 
 //logo
-import logoM from '../images/logoM.png'
+import logoM from '../images/logoM-red.png'
 
 export function Header() {
   return (
