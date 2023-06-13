@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/TrendingTV.css'
+import '../styles/ListHome.css'
 
 export function TrendingTV() {
   const [tv, setTv] = useState([])
@@ -21,9 +21,9 @@ export function TrendingTV() {
   }, [])
 
   return (
-    <div className='TrendingTV'>
+    <div className='list-home'>
       <h2>TV tendencias</h2>
-      <div className='TrendingTV-container'>
+      <div className='list-home-container'>
         {tv.map((tv) => {
           return (
             <div key={tv.id}>

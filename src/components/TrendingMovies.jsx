@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/TrendingMovies.css'
+import '../styles/ListHome.css'
 
 export function TrendingMovies() {
   const [movies, setMovies] = useState([])
@@ -23,12 +23,12 @@ export function TrendingMovies() {
   }, [])
 
   return (
-    <div className='TrendingMovies'>
-      <div className='TrendingMovies-first-movie'>
+    <div className='list-home'>
+      <div className='list-home-first-movie'>
         {<img src={`${URL_IMAGE + movie.poster_path}`} alt={`image: ${movie.title}`} />}
       </div>
       <h2>Peliculas tendencias</h2>
-      <div className='TrendingMovies-container'>
+      <div className='list-home-container'>
         {movies.map((movie) => {
           return (
             <div key={movie.id}>
