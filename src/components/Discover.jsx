@@ -12,7 +12,6 @@ export function Discover() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        console.log(data.results);
         setDiscover(data.results)
       })
       .catch((error) => {

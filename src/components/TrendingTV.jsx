@@ -12,7 +12,6 @@ export function TrendingTV() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        console.log(data.results);
         setTv(data.results)
       })
       .catch((error) => {
