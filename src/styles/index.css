@@ -11,7 +11,7 @@
   --text-primary: #fff;
   --text-secundary: #eeeeee;
   /* --green-app: #36a439; */
-  --green-app: #1273eb;
+  --blue-app: #1273eb;
   --scroll: #111;
   --navlink: #666;
 }
@@ -40,6 +40,9 @@ h2 {
   margin: 12px 0 15px 20px;
   font-size: 1.9rem;
   color: var(--subtitles);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 h3 {
   font-size: 1.6rem;

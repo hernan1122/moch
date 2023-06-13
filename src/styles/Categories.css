@@ -12,11 +12,11 @@
 }
 .Categories-content {
   padding: 10px;
-  border: 1px solid var(--green-app);
+  border: 1px solid var(--blue-app);
   border-radius: 10px;
   cursor: pointer;
   transition: .2s ease-in;
 }
 .Categories-content:hover {
-  background: var(--green-app);
+  background: var(--blue-app);
 }
