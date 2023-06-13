@@ -17,7 +17,6 @@ export function TrendingMovies() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        console.log(data.results);
         setMovies(data.results)
         setMovie(data.results[0])
       })
