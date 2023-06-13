@@ -10,6 +10,31 @@
   top: 0;
   left: calc(50% - 150px);
 }
+.list-home-container-title {
+  width: 100%;
+  margin: 12px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.list-home-container-title h2 {
+  margin: 0 20px;
+}
+.list-home-link {
+  margin-right: 20px;
+  padding: 5px 0 5px 8px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-secundary);
+  background: var(--blue-app);
+  text-decoration: none;
+  display: flex;
+  border-radius: 8px;
+}
+.list-home-icon {
+  font-size: 20px;
+  color: var(--text-secundary);
+}
 .list-home-container {
   width: 100%;
   padding-left: 20px;
