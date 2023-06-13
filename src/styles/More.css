@@ -1,0 +1,42 @@
+.More {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.More-container-title {
+  width: 100%;
+  margin: 12px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.More h2 {
+  margin: 70px 0 0 20px;
+}
+.More-link {
+  margin-right: 20px;
+  padding: 5px 4px 5px 8px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-secundary);
+  background: var(--blue-app);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+.More-icon {
+  font-size: 14px;
+  color: var(--text-secundary);
+}
+.More-container {
+  width: 100%;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  place-items: center;
+}
+.More-container img {
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
