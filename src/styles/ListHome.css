@@ -1,16 +1,16 @@
-.TrendingTV {
+.list-home {
   width: 100%;
   margin-bottom: 10px;
   position: relative;
   top: -70px;
 }
-.TrendingTV-first-movie {
+.list-home-first-movie {
   width: 80%;
   position: relative;
   top: 0;
   left: calc(50% - 150px);
 }
-.TrendingTV-container {
+.list-home-container {
   width: 100%;
   padding-left: 20px;
   overflow-x: auto;
@@ -18,15 +18,15 @@
   display: flex;
   gap: 8px;
 }
-.TrendingTV-container::-webkit-scrollbar {
+.list-home-container::-webkit-scrollbar {
   height: 3px;
   background: transparent;
 }
-.TrendingTV-container::-webkit-scrollbar-thumb {
+.list-home-container::-webkit-scrollbar-thumb {
   background: var(--scroll);
   border-radius: 50px;
 }
-.TrendingTV-container img {
+.list-home-container img {
   width: 120px;
   margin-bottom: 5px;
   border-radius: 8px;
