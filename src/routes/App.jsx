@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../containers/Home';
 import Search from '../containers/Search';
 import Favorites from '../containers/Favorites';
+import MoreTrendingMovies from '../containers/MoreTrendingMovies';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/search' element={<Search />} />
         <Route path='/favorites' element={<Favorites />} />
+        <Route path='/more-trending-movies' element={<MoreTrendingMovies />} />
       </Routes>
     </BrowserRouter>
   );
