@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Categories.css'
 
-export function Categories() {
+export function CategoriesMovies() {
   const [categories, setCategories] = useState([])
 
   const API_KEY = '763eb5981208a184a1e9429b05166e9c'
@@ -21,7 +21,7 @@ export function Categories() {
 
   return (
     <div className='Categories'>
-      <h2>Categorías</h2>
+      <h2>Categorías de peliculas</h2>
       <div className='Categories-container'>
         {categories.map((genres) => {
           return (
