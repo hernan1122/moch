@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { ButtonMoreBack } from './ButtonMoreBack';
 import '../styles/ListHome.css'
-
-//icons
-import {MdOutlineNavigateNext} from 'react-icons/md'
 
 export function TrendingTV() {
   const [tv, setTv] = useState([])
@@ -27,10 +24,7 @@ export function TrendingTV() {
     <div className='list-home'>
       <div className='list-home-container-title'>
         <h2>TV tendencias</h2>
-        <Link to={'/more-trending-tv'} className='list-home-link'>
-          Más
-          <MdOutlineNavigateNext className='list-home-icon' />
-        </Link>
+        <ButtonMoreBack to={'/more-trending-tv'} children={'Ver más'} />
       </div>
       <div className='list-home-container'>
         {tv.map((tv) => {

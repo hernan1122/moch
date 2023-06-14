@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { ButtonMoreBack } from '../components/ButtonMoreBack';
 import { Menu } from '../components/Menu';
 import '../styles/More.css'
-
-//icons
-import {MdArrowBackIosNew} from 'react-icons/md'
 
 function MoreTrendingMovies() {
   const [moreMovies, setMoreMovies] = useState([])
@@ -30,10 +27,7 @@ function MoreTrendingMovies() {
       <Header />
       <div className='More-container-title'>
         <h2>Peliculas tendencias</h2>
-        <Link to={'/'} className='More-link'>
-          Atras
-          <MdArrowBackIosNew className='More-icon' />
-        </Link>
+        <ButtonMoreBack to={'/'} children={'Atras'} />
       </div>
       <div className='More-container'>
         {moreMovies.map((more) => {
