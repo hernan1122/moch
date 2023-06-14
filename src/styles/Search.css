@@ -10,7 +10,7 @@
   width: 100%;
   height: 40px;
   display: flex;
-  background: var(--background-menu);
+  background: var(--background-form);
   border: 0px solid var(--blue-app);
   border-radius: 50px;
 }
