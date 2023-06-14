@@ -4,6 +4,7 @@
   top: -60px;
 }
 .Categories-container {
+  margin-bottom: 20px;
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
