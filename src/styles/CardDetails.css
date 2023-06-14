@@ -1,0 +1,87 @@
+.CardDetails {
+  width: 100%;
+}
+.CardDetails-img {
+  width: 100%;
+  position: fixed;
+}
+.CardDetails-container {
+  width: 100%;
+  margin-top: 400px;
+  padding: 15px 0 8px 0;
+  height: auto;
+  position: absolute;
+  background: var(--background);
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+}
+.CardDetails-container-title {
+  width: 100%;
+  padding: 0 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CardDetails-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.CardDetails-score .icon {
+  font-size: 15px;
+  color: #e7e709;
+}
+.CardDetails-score p {
+  font-size: 1.4rem;
+  color: var(--text-secundary);
+}
+.CardDetails-description p {
+  padding: 0 20px 0px 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-secundary);
+}
+.CardDetails-categories {
+  width: 100%;
+  margin: 20px 0 8px 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.CardDetails-categories-content {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid var(--blue-app);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+.CardDetails-categories-content:hover {
+  background: var(--blue-app);
+}
+.CardDetails-similar {
+  width: 100%;
+}
+.CardDetails-similar-container {
+  width: 100%;
+  padding-left: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+}
+.CardDetails-similar-container::-webkit-scrollbar {
+  height: 3px;
+  background: transparent;
+}
+.CardDetails-similar-container::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+  border-radius: 50px;
+}
+.CardDetails-similar-container img {
+  width: 120px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
