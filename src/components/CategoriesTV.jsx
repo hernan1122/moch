@@ -19,7 +19,7 @@ export function CategoriesTV() {
   }, [])
 
   return (
-    <div className='Categories'>
+    <div className='Categories-TV'>
       <h2>Categorías de TV</h2>
       <div className='Categories-container'>
         {categories.map((genres) => {
