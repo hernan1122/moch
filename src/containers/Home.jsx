@@ -5,6 +5,7 @@ import { TrendingTV } from '../components/TrendingTV';
 import { Discover } from '../components/Discover';
 import { CategoriesMovies } from '../components/CategoriesMovies';
 import { CategoriesTV } from '../components/CategoriesTV';
+import { PeopleList } from '../components/PeopleList';
 import { Menu } from '../components/Menu'
 import '../styles/Home.css';
 
@@ -17,6 +18,7 @@ function Home() {
       <Discover />
       <CategoriesMovies />
       <CategoriesTV />
+      <PeopleList />
       <Menu />
     </div>
   );
