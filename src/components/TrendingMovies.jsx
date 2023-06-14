@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { DataFile } from './DataFile';
 import { ButtonMoreBack } from './ButtonMoreBack';
 import '../styles/ListHome.css'
 
@@ -34,9 +36,12 @@ export function TrendingMovies() {
       <div className='list-home-container'>
         {movies.map((movie) => {
           return (
-            <div key={movie.id}>
-              <img src={`${URL_IMAGE + movie.poster_path}`} alt={`image: ${movie.title}`} />
-            </div>
+            <DataFile
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              posterPath={`${URL_IMAGE + movie.poster_path}`}
+            />
           )
         })}
       </div>
