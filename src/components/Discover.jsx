@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { DataFile } from './DataFile';
 import '../styles/ListHome.css'
 
 export function Discover() {
@@ -25,9 +26,12 @@ export function Discover() {
       <div className='list-home-container'>
         {discover.map((dis) => {
           return (
-            <div key={dis.id}>
-              <img src={`${URL_IMAGE + dis.poster_path}`} alt={`image: ${dis.title}`} />
-            </div>
+            <DataFile
+              key={dis.id}
+              id={dis.id}
+              title={dis.title}
+              posterPath={`${URL_IMAGE + dis.poster_path}`}
+            />
           )
         })}
       </div>

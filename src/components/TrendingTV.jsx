@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ButtonMoreBack } from './ButtonMoreBack';
+import { DataFile } from './DataFile';
 import '../styles/ListHome.css'
 
 export function TrendingTV() {
@@ -29,12 +30,35 @@ export function TrendingTV() {
       <div className='list-home-container'>
         {tv.map((tv) => {
           return (
-            <div key={tv.id}>
-              <img src={`${URL_IMAGE + tv.poster_path}`} alt={`image: ${tv.title}`} />
-            </div>
+            <DataFile
+              key={tv.id}
+              id={tv.id}
+              title={tv.title}
+              posterPath={`${URL_IMAGE + tv.poster_path}`}
+            />
           )
         })}
       </div>
     </div>
   );
 }
+
+
+
+// return (
+//     <div className='list-home'>
+//       <div className='list-home-container-title'>
+//         <h2>TV tendencias</h2>
+//         <ButtonMoreBack to={'/more-trending-tv'} children={'Ver más'} />
+//       </div>
+//       <div className='list-home-container'>
+//         {tv.map((tv) => {
+//           return (
+//             <div key={tv.id}>
+//               <img src={`${URL_IMAGE + tv.poster_path}`} alt={`image: ${tv.title}`} />
+//             </div>
+//           )
+//         })}
+//       </div>
+//     </div>
+//   );
