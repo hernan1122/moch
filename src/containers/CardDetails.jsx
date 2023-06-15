@@ -24,7 +24,6 @@ function CardDetails() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        console.log('Data', data);
         setDetails(data)
         setGenres(data.genres)
       })
@@ -34,7 +33,6 @@ function CardDetails() {
     fetch(url_recommendations)
       .then(res => res.json())
       .then((data) => {
-        console.log('Recomendacion', data);
         setRecommendations(data.results)
       })
   }, [])
