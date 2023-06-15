@@ -1,60 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { DataFile } from '../components/DataFile';
 import '../styles/CardDetails.css'
 
 //icons
 import { AiFillStar } from 'react-icons/ai'
 
-import avatar from '../images/avatar_the_way_of_water.jpg'
+function CardDetails() {
+  const [details, setDetails] = useState([])
+  const [genres, setGenres] = useState([])
+  const [recommendations, setRecommendations] = useState([])
 
-function CardDetails({title, image, score, description, categories, similarTitles}) {
+  const location = useLocation()
+  const id = new URLSearchParams(location.search).get('id')
+
+  const API_KEY = '763eb5981208a184a1e9429b05166e9c'
+  const URL_IMAGE = 'https://image.tmdb.org/t/p/w300'
+  const url = `https://api.themoviedb.org/3/movie/${id}?language=es&&api_key=${API_KEY}`
+  const url_recommendations = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${API_KEY}`
+
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then((data) => {
+        console.log('Data', data);
+        setDetails(data)
+        setGenres(data.genres)
+      })
+  }, [])
+
+  useEffect(() => {
+    fetch(url_recommendations)
+      .then(res => res.json())
+      .then((data) => {
+        console.log('Recomendacion', data);
+        setRecommendations(data.results)
+      })
+  }, [])
+
   return (
     <div className='CardDetails'>
       <Header />
-      <img className='CardDetails-img' src={avatar} alt="" />
+      <img className='CardDetails-img' src={`${URL_IMAGE + details.poster_path}`} alt="" />
       <div className='CardDetails-container'>
         <div className='CardDetails-container-title'>
-          <h2>Avatar: the way of water</h2>
+          <h2>{details.title}</h2>
           <div className='CardDetails-score'>
             <AiFillStar className='icon' />
-            <p>80</p>
+            <p>{details.vote_average}</p>
           </div>
         </div>
         <div className='CardDetails-description'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat iusto architecto minima soluta repellat consequuntur dolores velit non! Dicta sunt assumenda vitae laudantium nobis dolores sequi est perferendis necessitatibus!
-          </p>
+          <p>{details.overview}</p>
         </div>
         <div className='CardDetails-categories'>
-          <div className='CardDetails-categories-content'>
-            <h3>Acción</h3>
-          </div>
-          <div className='CardDetails-categories-content'>
-            <h3>Acción</h3>
-          </div>
-          <div className='CardDetails-categories-content'>
-            <h3>Acción</h3>
-          </div>
+          {genres.map((genre) => {
+            return (
+              <div key={genre.id} className='CardDetails-categories-content'>
+                <h3>{genre.name}</h3>
+              </div>
+            )
+          })}
         </div>
         <div className='CardDetails-similar'>
           <h2>Titulos similares</h2>
           <div className='CardDetails-similar-container'>
-            <Link to={'/details'}>
-              <img src={avatar} alt=''/>
-            </Link>
-            <Link to={'/details'}>
-              <img src={avatar} alt=''/>
-            </Link>
-            <Link to={'/details'}>
-              <img src={avatar} alt=''/>
-            </Link>
-            <Link to={'/details'}>
-              <img src={avatar} alt=''/>
-            </Link>
-            <Link to={'/details'}>
-              <img src={avatar} alt=''/>
-            </Link>
+            {recommendations.map((recomm) => {
+              return (
+                <DataFile
+                  key={recomm.id}
+                  id={recomm.id}
+                  title={recomm.title}
+                  posterPath={`${URL_IMAGE + recomm.poster_path}`}
+                />
+              )
+            })}
           </div>
         </div>
       </div>
@@ -63,58 +84,3 @@ function CardDetails({title, image, score, description, categories, similarTitle
 }
 
 export default CardDetails
-
-
-
-
-// return (
-//     <div className='CardDetails'>
-//       <Header />
-//       <img className='CardDetails-img' src={avatar} alt="" />
-//       <div className='CardDetails-container'>
-//         <div className='CardDetails-container-title'>
-//           <h2>Avatar: the way of water</h2>
-//           <div className='CardDetails-score'>
-//             <AiFillStar className='icon' />
-//             <p>80</p>
-//           </div>
-//         </div>
-//         <div className='CardDetails-description'>
-//           <p>
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat iusto architecto minima soluta repellat consequuntur dolores velit non! Dicta sunt assumenda vitae laudantium nobis dolores sequi est perferendis necessitatibus!
-//           </p>
-//         </div>
-//         <div className='CardDetails-categories'>
-//           <div className='CardDetails-categories-content'>
-//             <h3>Acción</h3>
-//           </div>
-//           <div className='CardDetails-categories-content'>
-//             <h3>Acción</h3>
-//           </div>
-//           <div className='CardDetails-categories-content'>
-//             <h3>Acción</h3>
-//           </div>
-//         </div>
-//         <div className='CardDetails-similar'>
-//           <h2>Titulos similares</h2>
-//           <div className='CardDetails-similar-container'>
-//             <Link to={'/details'}>
-//               <img src={avatar} alt=''/>
-//             </Link>
-//             <Link to={'/details'}>
-//               <img src={avatar} alt=''/>
-//             </Link>
-//             <Link to={'/details'}>
-//               <img src={avatar} alt=''/>
-//             </Link>
-//             <Link to={'/details'}>
-//               <img src={avatar} alt=''/>
-//             </Link>
-//             <Link to={'/details'}>
-//               <img src={avatar} alt=''/>
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-// );
