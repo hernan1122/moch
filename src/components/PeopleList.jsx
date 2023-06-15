@@ -12,7 +12,6 @@ export function PeopleList() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        console.log('People', data);
         setPeople(data.results)
       })
       .catch((error) => {
