@@ -31,7 +31,7 @@ export function TrendingMovies() {
       </div>
       <div className='list-home-container-title'>
         <h2>Peliculas tendencias</h2>
-        <ButtonMoreBack to={'/more-trending-movies'} children={'Ver más'} />
+        <ButtonMoreBack to={'/more-trending-movies'} children={'VER MÁS'} />
       </div>
       <div className='list-home-container'>
         {movies.map((movie) => {

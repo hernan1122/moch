@@ -25,7 +25,7 @@ export function TrendingTV() {
     <div className='list-home'>
       <div className='list-home-container-title'>
         <h2>TV tendencias</h2>
-        <ButtonMoreBack to={'/more-trending-tv'} children={'Ver más'} />
+        <ButtonMoreBack to={'/more-trending-tv'} children={'VER MÁS'} />
       </div>
       <div className='list-home-container'>
         {tv.map((tv) => {
