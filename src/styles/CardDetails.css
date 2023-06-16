@@ -53,13 +53,14 @@
 .CardDetails-categories-content {
   margin-bottom: 5px;
   padding: 10px;
-  border: 1px solid var(--blue-app);
-  border-radius: 10px;
+  background: var(--background-categories);
+  border: 1px solid var(--border-categories);
+  border-radius: 100px;
   cursor: pointer;
   transition: .2s ease-in;
 }
 .CardDetails-categories-content:hover {
-  background: var(--blue-app);
+  background: var(--border-categories);
 }
 .CardDetails-similar {
   width: 100%;
