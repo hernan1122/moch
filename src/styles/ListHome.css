@@ -51,3 +51,6 @@
   margin-bottom: 5px;
   border-radius: 8px;
 }
+.list-home-link {
+  text-decoration: none;
+}
