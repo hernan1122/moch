@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/ListHome.css'
 
 export function PeopleList() {
@@ -25,10 +26,10 @@ export function PeopleList() {
       <div className='list-home-container'>
         {people.map((person) => {
           return (
-            <div key={person.id}>
+            <Link to={`/details-person?id=${person.id}`} key={person.id} className='list-home-link'>
               <img src={`${URL_IMAGE + person.profile_path}`} alt={`Imagen: ${person.name}`} />
               <h4>{person.name}</h4>
-            </div>
+            </Link>
           )
         })}
       </div>
