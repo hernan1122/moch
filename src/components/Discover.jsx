@@ -29,6 +29,7 @@ export function Discover() {
             <DataFile
               key={dis.id}
               id={dis.id}
+              to={`/details-movie?id=${dis.id}`}
               title={dis.title}
               posterPath={`${URL_IMAGE + dis.poster_path}`}
             />
