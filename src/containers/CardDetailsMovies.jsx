@@ -7,7 +7,7 @@ import '../styles/CardDetails.css'
 //icons
 import { AiFillStar } from 'react-icons/ai'
 
-function CardDetails() {
+function CardDetailsMovies() {
   const [details, setDetails] = useState([])
   const [genres, setGenres] = useState([])
   const [recommendations, setRecommendations] = useState([])
@@ -81,4 +81,4 @@ function CardDetails() {
   );
 }
 
-export default CardDetails
+export default CardDetailsMovies
