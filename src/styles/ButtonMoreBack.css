@@ -1,11 +1,7 @@
 .ButtonMoreBack {
   margin-right: 20px;
-  padding: 5px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  color: var(--text-secundary);
-  background: var(--blue-app);
+  color: var(--subtitles);
   text-decoration: none;
-  display: flex;
-  border-radius: 8px;
 }
