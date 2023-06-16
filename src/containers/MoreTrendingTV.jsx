@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { ButtonMoreBack } from '../components/ButtonMoreBack';
+import { DataFile } from '../components/DataFile';
 import { Menu } from '../components/Menu';
 import '../styles/More.css'
 
 function MoreTrendingTV() {
-  const [moreMovies, setMoreMovies] = useState([])
+  const [moreTV, setMoreTV] = useState([])
 
   const API_KEY = '763eb5981208a184a1e9429b05166e9c'
   const URL_IMAGE = 'https://image.tmdb.org/t/p/w300'
@@ -15,7 +16,7 @@ function MoreTrendingTV() {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
-        setMoreMovies(data.results)
+        setMoreTV(data.results)
       })
       .catch((error) => {
         console.log(error);
@@ -27,14 +28,18 @@ function MoreTrendingTV() {
       <Header />
       <div className='More-container-title'>
         <h2>TV tendencias</h2>
-        <ButtonMoreBack to={'/'} children={'Atras'} />
+        <ButtonMoreBack to={'/'} children={'ATRÁS'} />
       </div>
       <div className='More-container'>
-        {moreMovies.map((more) => {
+        {moreTV.map((more) => {
           return (
-            <div key={more.id}>
-              <img src={`${URL_IMAGE + more.poster_path}`} alt={`image: ${more.title}`} />
-            </div>
+            <DataFile
+              key={more.id}
+              id={more.id}
+              to={`/details-tv?id=${more.id}`}
+              title={more.title}
+              posterPath={`${URL_IMAGE + more.poster_path}`}
+            />
           )
         })}
       </div>

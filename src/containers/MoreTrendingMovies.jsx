@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { ButtonMoreBack } from '../components/ButtonMoreBack';
+import { DataFile } from '../components/DataFile';
 import { Menu } from '../components/Menu';
 import '../styles/More.css'
 
@@ -27,14 +28,18 @@ function MoreTrendingMovies() {
       <Header />
       <div className='More-container-title'>
         <h2>Peliculas tendencias</h2>
-        <ButtonMoreBack to={'/'} children={'Atras'} />
+        <ButtonMoreBack to={'/'} children={'ATRÁS'} />
       </div>
       <div className='More-container'>
         {moreMovies.map((more) => {
           return (
-            <div key={more.id}>
-              <img src={`${URL_IMAGE + more.poster_path}`} alt={`image: ${more.title}`} />
-            </div>
+            <DataFile
+              key={more.id}
+              id={more.id}
+              to={`/details-movie?id=${more.id}`}
+              title={more.title}
+              posterPath={`${URL_IMAGE + more.poster_path}`}
+            />
           )
         })}
       </div>
