@@ -5,7 +5,8 @@ import Search from '../containers/Search';
 import Favorites from '../containers/Favorites';
 import MoreTrendingMovies from '../containers/MoreTrendingMovies';
 import MoreTrendingTV from '../containers/MoreTrendingTV';
-import CardDetails from '../containers/CardDetails';
+import CardDetailsMovies from '../containers/CardDetailsMovies';
+import CardDetailsTV from '../containers/CardDetailsTV';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path='/favorites' element={<Favorites />} />
         <Route path='/more-trending-movies' element={<MoreTrendingMovies />} />
         <Route path='/more-trending-tv' element={<MoreTrendingTV />} />
-        <Route path='/details' element={<CardDetails />} />
+        <Route path='/details-movie' element={<CardDetailsMovies />} />
+        <Route path='/details-tv' element={<CardDetailsTV />} />
       </Routes>
     </BrowserRouter>
   );
