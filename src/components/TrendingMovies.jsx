@@ -39,6 +39,7 @@ export function TrendingMovies() {
             <DataFile
               key={movie.id}
               id={movie.id}
+              to={`/details-movie?id=${movie.id}`}
               title={movie.title}
               posterPath={`${URL_IMAGE + movie.poster_path}`}
             />
