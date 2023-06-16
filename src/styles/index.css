@@ -7,14 +7,15 @@
   --background: #000;
   --background-menu: #111;
   --background-form: #222;
+  --background-categories: #0a0a0a;
   --title: #fff;
   --subtitles: #d3d3d3;
   --text-primary: #fff;
   --text-secundary: #eeeeee;
-  /* --green-app: #36a439; */
   --blue-app: #1273eb;
   --scroll: #111;
   --navlink: #666;
+  --border-categories: #333;
 }
 html {
   font-size: 62.5%;
