@@ -27,6 +27,7 @@ export function TrendingMovies() {
     <div className='list-home'>
       <div className='list-home-first-movie'>
         {<img src={`${URL_IMAGE + movie.poster_path}`} alt={`image: ${movie.title}`} />}
+        <div className='list-home-first-movie-shadow'></div>
       </div>
       <div className='list-home-container-title'>
         <h2>Peliculas tendencias</h2>
