@@ -40,26 +40,7 @@ export function TrendingTV() {
           )
         })}
       </div>
+      <div className='list-home-shadow'></div>
     </div>
   );
 }
-
-
-
-// return (
-//     <div className='list-home'>
-//       <div className='list-home-container-title'>
-//         <h2>TV tendencias</h2>
-//         <ButtonMoreBack to={'/more-trending-tv'} children={'Ver más'} />
-//       </div>
-//       <div className='list-home-container'>
-//         {tv.map((tv) => {
-//           return (
-//             <div key={tv.id}>
-//               <img src={`${URL_IMAGE + tv.poster_path}`} alt={`image: ${tv.title}`} />
-//             </div>
-//           )
-//         })}
-//       </div>
-//     </div>
-//   );

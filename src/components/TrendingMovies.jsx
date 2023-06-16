@@ -46,6 +46,7 @@ export function TrendingMovies() {
           )
         })}
       </div>
+      <div className='list-home-shadow'></div>
     </div>
   );
 }

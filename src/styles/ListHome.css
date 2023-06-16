@@ -54,3 +54,11 @@
 .list-home-link {
   text-decoration: none;
 }
+.list-home-shadow {
+  width: 30px;
+  height: 220px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, #00000000, #000000);
+}

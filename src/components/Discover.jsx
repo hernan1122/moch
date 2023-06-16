@@ -36,6 +36,7 @@ export function Discover() {
           )
         })}
       </div>
+      <div className='list-home-shadow'></div>
     </div>
   );
 }

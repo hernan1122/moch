@@ -43,3 +43,11 @@
 .Categories-content:hover {
   background: var(--border-categories);
 }
+.Categories-shadow {
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, #00000000, #000000);
+}

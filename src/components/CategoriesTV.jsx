@@ -30,6 +30,7 @@ export function CategoriesTV() {
           )
         })}
       </div>
+      <div className='Categories-shadow'></div>
     </div>
   );
 }

@@ -33,6 +33,7 @@ export function PeopleList() {
           )
         })}
       </div>
+      <div className='list-home-shadow'></div>
     </div>
   );
 }

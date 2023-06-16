@@ -30,6 +30,7 @@ export function CategoriesMovies() {
           )
         })}
       </div>
+      <div className='Categories-shadow'></div>
     </div>
   );
 }
