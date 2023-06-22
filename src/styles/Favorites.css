@@ -1,0 +1,9 @@
+.Favorites {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+.Favorites h2 {
+  margin: 0;
+}
