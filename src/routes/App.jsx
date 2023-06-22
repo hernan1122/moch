@@ -5,6 +5,7 @@ import Search from '../containers/Search';
 import Favorites from '../containers/Favorites';
 import MoreTrendingMovies from '../containers/MoreTrendingMovies';
 import MoreTrendingTV from '../containers/MoreTrendingTV';
+import Category from '../containers/Category';
 import CardDetailsMovies from '../containers/CardDetailsMovies';
 import CardDetailsTV from '../containers/CardDetailsTV';
 import CardDetailsPeople from '../containers/CardDetailsPeople';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/favorites' element={<Favorites />} />
         <Route path='/more-trending-movies' element={<MoreTrendingMovies />} />
         <Route path='/more-trending-tv' element={<MoreTrendingTV />} />
+        <Route path='/category' element={<Category />} />
         <Route path='/details-movie' element={<CardDetailsMovies />} />
         <Route path='/details-tv' element={<CardDetailsTV />} />
         <Route path='/details-person' element={<CardDetailsPeople />} />
