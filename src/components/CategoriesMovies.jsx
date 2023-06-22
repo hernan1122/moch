@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Categories.css'
 
 export function CategoriesMovies() {
@@ -24,9 +25,9 @@ export function CategoriesMovies() {
       <div className='Categories-container'>
         {categories.map((genres) => {
           return (
-            <div className='Categories-content' key={genres.id}>
+            <Link to={`/category?id=${genres.id}`} className='Categories-content' key={genres.id}>
               <h3>{genres.name}</h3>
-            </div>
+            </Link>
           )
         })}
       </div>
