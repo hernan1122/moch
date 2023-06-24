@@ -6,9 +6,12 @@ import '../styles/CardDetails.css'
 
 //icons
 import { AiFillStar } from 'react-icons/ai'
+import { TbPoint } from 'react-icons/tb'
 
 function CardDetailsSeries() {
   const [details, setDetails] = useState([])
+  const [lastEpisode, setLastEpisode] = useState([])
+  const [nexteEpisode, setNextEpisode] = useState([])
   const [genres, setGenres] = useState([])
   const [recommendations, setRecommendations] = useState([])
 
@@ -25,6 +28,8 @@ function CardDetailsSeries() {
       .then(res => res.json())
       .then((data) => {
         setDetails(data)
+        setLastEpisode(data.last_episode_to_air)
+        setNextEpisode(data.next_episode_to_air)
         setGenres(data.genres)
       })
   }, [])
@@ -51,6 +56,16 @@ function CardDetailsSeries() {
         </div>
         <div className='CardDetails-description'>
           <p>{details.overview}</p>
+        </div>
+        <div className='CardDetails-episode'>
+          <TbPoint className='icon' />
+          <h3>Último episodio:</h3>
+          <p>{lastEpisode.name}</p>
+        </div>
+        <div className='CardDetails-episode'>
+          <TbPoint className='icon' />
+          <h3>Siguiente episodio:</h3>
+          <p>{nexteEpisode.name}</p>
         </div>
         <div className='CardDetails-categories'>
           {genres.map((genre) => {
