@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from '../components/Menu';
 import '../styles/Search.css'
 
@@ -42,9 +43,9 @@ function Search() {
       <div className='Search-results'>
         {results.map((result) => {
           return (
-            <div key={result.id}>
+            <Link to={`/details-movie?id=${result.id}`} key={result.id}>
               <img src={`${URL_IMAGE + result.poster_path}`} alt={`image: ${result.title}`} />
-            </div>
+            </Link>
           )
         })}
       </div>
