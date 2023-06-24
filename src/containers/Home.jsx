@@ -3,6 +3,7 @@ import { Header } from '../components/Header';
 import { TrendingMovies } from '../components/TrendingMovies';
 import { TrendingTV } from '../components/TrendingTV';
 import { Discover } from '../components/Discover';
+import { SeriesLists } from '../components/SeriesLists';
 import { CategoriesMovies } from '../components/CategoriesMovies';
 import { CategoriesTV } from '../components/CategoriesTV';
 import { PeopleList } from '../components/PeopleList';
@@ -16,6 +17,7 @@ function Home() {
       <TrendingMovies />
       <TrendingTV />
       <Discover />
+      <SeriesLists />
       <CategoriesMovies />
       <CategoriesTV />
       <PeopleList />
