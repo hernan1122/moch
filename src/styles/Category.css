@@ -1,0 +1,14 @@
+.Category {
+  width: 100%;
+  margin-top: 80px;
+}
+.Category-container-title {
+  width: 100%;
+  margin: 12px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.Category-container-title h2 {
+  margin: 0 20px;
+}
