@@ -49,15 +49,19 @@
   cursor: pointer;
   transition: 0.3s ease-in-out all;
 }
-.Search-results {
+.Search-results,
+.Search-more {
   width: 100%;
-  margin-bottom: 70px;
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   place-items: center;
 }
-.Search-results img {
+.Search-more {
+  margin-bottom: 80px;
+}
+.Search-results img,
+.Search-more img {
   width: 140px;
   margin-bottom: 5px;
   border-radius: 8px;
