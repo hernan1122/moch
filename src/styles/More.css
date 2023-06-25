@@ -4,10 +4,14 @@
 }
 .More-container-title {
   width: 100%;
-  margin: 12px 0 15px 0;
+  padding: 10px 0 10px 0;
+  position: fixed;
+  top: 0px;
+  background: var(--background);
   display: flex;
   justify-content: space-between;
   align-items: end;
+  z-index: 2;
 }
 .More h2 {
   margin: 70px 0 0 20px;
@@ -15,6 +19,8 @@
 .More-container {
   width: 100%;
   padding: 0 20px;
+  position: relative;
+  top: 115px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   place-items: center;

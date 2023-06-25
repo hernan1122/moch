@@ -7,7 +7,7 @@
   background: linear-gradient(to top, #00000000, #000);
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 .Header img {
   width: 50px;
