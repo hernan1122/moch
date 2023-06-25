@@ -54,18 +54,20 @@ function Search() {
           <button><AiOutlineSearch /></button>
         </form>
       </div>
-      <div className='Search-results'>
-        {results.map((result) => {
-          return (
-            <Link to={`/details-movie?id=${result.id}`} key={result.id}>
-              <img src={`${URL_IMAGE + result.poster_path}`} alt={`image: ${result.title}`} />
-            </Link>
-          )
-        })}
+      <div className='Search-more'>
+        <div className='Search-results'>
+          {results.map((result) => {
+            return (
+              <Link to={`/details-movie?id=${result.id}`} key={result.id}>
+                <img src={`${URL_IMAGE + result.poster_path}`} alt={`image: ${result.title}`} />
+              </Link>
+            )
+          })}
+        </div>
       </div>
-      <div>
+      <div className='Search-more'>
         <h2>Lo más buscado</h2>
-        <div className='Search-more'>
+        <div className='Search-more-container'>
           {moreSearch.map((more) => {
             return (
               <DataFile

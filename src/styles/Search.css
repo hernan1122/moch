@@ -3,8 +3,11 @@
 }
 .Search-container {
   width: 100%;
-  margin: 20px 0;
-  padding: 0 20px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  background: var(--background);
+  z-index: 2;
 }
 .Search-container-form {
   width: 100%;
@@ -50,7 +53,7 @@
   transition: 0.3s ease-in-out all;
 }
 .Search-results,
-.Search-more {
+.Search-more-container {
   width: 100%;
   padding: 0 20px;
   display: grid;
@@ -58,10 +61,15 @@
   place-items: center;
 }
 .Search-more {
-  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+  top: 82px;
+}
+.Search-more-container {
+  margin-bottom: 160px;
 }
 .Search-results img,
-.Search-more img {
+.Search-more-container img {
   width: 140px;
   margin-bottom: 5px;
   border-radius: 8px;
